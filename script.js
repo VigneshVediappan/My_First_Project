@@ -13,3 +13,6 @@ updateClock();
 function sayHello() {
     alert("Welcome to my developer world! 🚀");
 }
+function showProject(projectName) {
+  alert(projectName + " project selected!");
+}

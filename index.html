@@ -6,11 +6,35 @@
     <title>Vickkyy | Developer</title>
     <link rel="stylesheet" href="style.css">
 </head>
+<div class="mouse-glow"></div>
+<button id="backToTop">↑</button>
+<div class="project-modal" id="projectModal">
 
+    <div class="modal-content">
+
+        <button class="close-modal" onclick="closeProject()">×</button>
+
+        <h2 id="modalTitle"></h2>
+
+        <p id="modalDescription"></p>
+
+        <div id="modalTech"></div>
+
+    </div>
+
+</div>
 <body>
+    <div id="loader">
+    <div class="loader-content">
+        <div class="loader-ring"></div>
+        <div class="loader-text">SYSTEM INITIALIZING...</div>
+        <div class="loader-subtext">VICKY.DEV</div>
+    </div>
+</div>
+    <div id="particles"></div>
     <nav class="navbar">
-  <div class="logo">Vickkyyy</div>
-
+  <div class="logo">Vickkyy</div>
+  <div class="digital-clock" id="clock"></div>
   <div class="nav-links">
     <a href="#home">Home</a>
     <a href="#about">About</a>
@@ -20,15 +44,19 @@
   </div>
 </nav>
 
-    <div class="container" id="home">
-        <div class="top-bar">
-            <span>● SYSTEM ONLINE</span>
-            <span id="clock">00:00:00</span>
+  <div class="container" id="home">
+    <div class="hero">
+
+        <div class="system-status">
+            <span class="status-dot">●</span> SYSTEM ONLINE
         </div>
 
-        <h1>Hi, I'm <span class="highlight">Vickkyy</span> 👋</h1>
+        <h1>Hi, I'm Vickkyyy 👋</h1>
 
-        <p>Student • Developer • AI Enthusiast</p>
+        <p class="typing-text" id="typing"></p>
+
+    </div>
+</div>
         <section class="about" id="about">
     <h2>About Me</h2>
 
@@ -43,51 +71,92 @@
     </p>
         <section class="about" id="about">
 </section>
-        </section>
-
-       <section class="skills" id="skills">
+    <section class="skills" id="skills">
     <h2>Skills</h2>
 
-    <div class="skills-list">
-        <span>HTML</span>
-        <span>CSS</span>
-        <span>JavaScript</span>
-        <span>Python</span>
-        <span>C</span>
-        <span>Git</span>
-        <span>GitHub</span>
+    <div class="skills-grid">
+
+        <div class="skill-card">
+            <div class="skill-icon">🌐</div>
+            <h3>HTML</h3>
+            <div class="skill-bar">
+                <span style="width: 30%;"></span>
+            </div>
+            <small>30%</small>
+        </div>
+
+        <div class="skill-card">
+            <div class="skill-icon">🎨</div>
+            <h3>CSS</h3>
+            <div class="skill-bar">
+                <span style="width: 20%;"></span>
+            </div>
+            <small>20%</small>
+        </div>
+
+        <div class="skill-card">
+            <div class="skill-icon">⚡</div>
+            <h3>JavaScript</h3>
+            <div class="skill-bar">
+                <span style="width: 40%;"></span>
+            </div>
+            <small>40%</small>
+        </div>
+
+        <div class="skill-card">
+            <div class="skill-icon">🐍</div>
+            <h3>Python</h3>
+            <div class="skill-bar">
+                <span style="width: 85%;"></span>
+            </div>
+            <small>85%</small>
+        </div>
+
+        <div class="skill-card">
+            <div class="skill-icon">💻</div>
+            <h3>C</h3>
+            <div class="skill-bar">
+                <span style="width: 70%;"></span>
+            </div>
+            <small>70%</small>
+        </div>
+
+        <div class="skill-card">
+            <div class="skill-icon">🔧</div>
+            <h3>Git & GitHub</h3>
+            <div class="skill-bar">
+                <span style="width: 75%;"></span>
+            </div>
+            <small>75%</small>
+        </div>
+
     </div>
 </section>
-   <section class="projects" id="projects">
+ <section class="projects" id="projects">
     <h2>Projects</h2>
 
     <div class="project-container">
 
-        <div class="project-card">
+        <div class="project-card" onclick="openProject('tictactoe')">
             <h3>🎮 Tic-Tac-Toe with Minimax AI</h3>
-            <p>
-                A Tic-Tac-Toe game using Minimax AI to create
-                an intelligent computer opponent.
-            </p>
+            <p>AI-powered game using the Minimax algorithm.</p>
+            <span class="view-project">View Details →</span>
         </div>
 
-        <div class="project-card">
+        <div class="project-card" onclick="openProject('digitaltwin')">
             <h3>🏭 AI-Based Digital Twin</h3>
-            <p>
-                An AI-powered Digital Twin concept for predictive
-                maintenance in MSME industries.
-            </p>
+            <p>AI-based predictive maintenance concept for MSMEs.</p>
+            <span class="view-project">View Details →</span>
         </div>
 
-        <div class="project-card">
+        <div class="project-card" onclick="openProject('price')">
             <h3>💰 Price Comparison Website</h3>
-            <p>
-                A website concept that compares prices from
-                multiple websites to help users find better deals.
-            </p>
+            <p>Compare prices from multiple websites.</p>
+            <span class="view-project">View Details →</span>
         </div>
 
     </div>
+</section>
 </section>
 <section class="contact" id="contact">
   <h2>Connect With Me</h2>
@@ -119,6 +188,10 @@
     </div>
 
     <script src="script.js"></script>
+    <footer class="footer">
+    <p>© 2026 Vicky. All rights reserved.</p>
+    <p>Student • Developer • AI Enthusiast</p>
+</footer>
 
 </body>
 </html>

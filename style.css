@@ -60,3 +60,15 @@ h2 {
 .top-bar span:first-child {
     color: #00e5ff;
 }
+.about {
+  max-width: 800px;
+  margin: 50px auto;
+  padding: 25px;
+  text-align: center;
+}
+
+.about p {
+  color: #b8b8b8;
+  line-height: 1.8;
+  font-size: 16px;
+}

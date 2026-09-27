@@ -72,7 +72,9 @@ document.addEventListener("mousemove", (event) => {
 
 const particlesContainer = document.getElementById("particles");
 
-for (let i = 0; i < 40; i++) {
+const particleCount = window.innerWidth <= 600 ? 15 : 40;
+
+for (let i = 0; i < particleCount; i++) {
     const particle = document.createElement("div");
 
     particle.classList.add("particle");

@@ -1019,3 +1019,38 @@ async function loadGitHubProjects() {
 }
 
 loadGitHubProjects();
+.error-page {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.error-code {
+    font-size: 120px;
+    font-weight: bold;
+    color: #00ffff;
+    text-shadow:
+        0 0 10px #00ffff,
+        0 0 30px #00ffff,
+        0 0 60px rgba(0, 255, 255, 0.5);
+}
+
+.error-page h1 {
+    margin: 10px 0;
+}
+
+.error-page p {
+    color: #aaa;
+    margin-bottom: 25px;
+}
+
+@media (max-width: 600px) {
+    .error-code {
+        font-size: 80px;
+    }
+}
